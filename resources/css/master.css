@@ -1,0 +1,368 @@
+﻿@import url('libraries/bootstrap.min.css');
+@import url('libraries/bootstrap-datetimepicker.min.css');
+@import url('libraries/datatables.css');
+@import url('libraries/font-awesome.min.css');
+@import url('custom/office365.css');
+@import url('custom/custom-table.css');
+@import url('custom/menu-left.css');
+/****************************************************************
+	FONT-FACE
+****************************************************************/
+@font-face {
+	font-family: 'Lato Black';
+	font-display: auto;
+	src: url('../fonts/Lato-Black.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Lato Bold';
+	font-display: auto;
+	src: url('../fonts/Lato-Bold.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Lato Light';
+	font-display: auto;
+	src: url('../fonts/Lato-Light.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Lato Medium';
+	font-display: auto;
+	src: url('../fonts/Lato-Medium.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Lato Regular';
+	font-display: auto;
+	src: url('../fonts/Lato-Regular.ttf')  format('truetype');
+}
+/****************************************************************
+	OFFICE 365
+****************************************************************/
+*,
+*:before,
+*:after {
+	border: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color:#210D3B;
+}
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	color:#210D3B!important;
+	cursor:pointer;;
+	text-decoration:none!important;
+}
+label {
+	color:#662D8C!important;
+	font-family:"Lato Medium"!important;
+	font-size:.9rem!important;
+}
+/****************************************************************
+	BOOTSTRAP
+****************************************************************/
+.nav-tabs {
+	border-bottom: 1px solid rgba(0,0,0,0) !important;
+}
+.nav-justified .nav-item {
+	margin-right:1rem;
+	max-width:200px;
+}
+.nav-tabs .nav-link {
+	border:1px solid #662D8C !important;
+	border-radius:5px;
+	color:#662D8C;
+	font-family:"Lato Bold";
+	font-size:.8rem;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+	border-color: #dee2e6 #dee2e6 #fff !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	color: #FFF !important;
+    background-color: #662D8C !important;
+    border-color: #dee2e6 #dee2e6 #fff !important;
+}
+.tab-content > .tab-pane.fade > h1 {
+	color: #662D8C;
+	font-family: "Lato Medium";
+	font-size: 35px;
+}
+.tab-content {
+	border:none!important;
+}
+.form-control {
+	border:1px solid #662D8C!important;
+	border-radius:2.5px;
+	box-shadow:0 0 0px 1px #662D8C!important;
+	color:#495057;
+	font-family:"Lato Medium";
+	height:calc(2.25rem + 2px);
+	padding:1rem 1.5rem;
+}
+.btn {
+	font-family:"Lato Medium";
+	font-size:.9rem;
+}
+.btn-white {
+	background-color: #FFF!important;
+    border-color: #210D3B!important;
+    color: #210D3B!important;
+}
+.btn-inkia-energy-1 {
+	background-color:#662D8C!important;
+	color:#FFF!important;
+}
+.btn-inkia-energy-2 {
+	background-color:#F7892A!important;
+	color:#FFF!important;
+}
+.bc-inkia-energy-1 {
+	background-color:#662D8C!important;
+}
+.custom-control-label {
+	color:#888!important;
+}
+.custom-control-label::before,
+.custom-control-label::after {
+	border:1px solid #210D3B!important;
+	border-radius:5px!important;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+	background-color:#662D8C!important;
+}
+.modal-header {
+	border-bottom:1px solid #CCC!important;
+}
+/*DATATABLE*/
+.dt-buttons.btn-group {
+	display:none;
+}
+table.dataTable > tbody > tr.child ul.dtr-details {
+	width:100%!important;
+}
+.page-link {
+	color:#662D8C!important;
+}
+.page-item.active .page-link {
+	background-color:#662D8C!important;
+	border-color:#662D8C!important;
+	color:#FFF!important;
+}
+/****************************************************************
+	MASTER PAGE
+****************************************************************/
+body {
+	line-height: 1.25;
+}
+main {
+	background-color:#4A1F6F;
+}
+main > div {
+	background-color:#FFF;
+	min-height:100vh;
+}
+.contenedor-header {
+	background-color: #210D3B;
+	color: #FFF;
+	display: inline-flex;
+	font-size: 12px;
+	width: 100%;
+}
+.contenedor-header > .container {
+	align-items: center;
+	display: inline-flex;
+	max-width:1260px;
+	text-align: left;
+}
+.contenedor-header h5 {
+	color:#FFF;
+}
+.contenedor-header > .container > div {
+	align-items: center;
+	display: inline-flex;
+	width: 100%;
+}
+.contenedor-header > .container > div:nth-child(2) {
+	justify-content: flex-end;
+}
+.contenedor-header > .container > div:nth-child(2) > div {
+	align-items: center;
+	display: inline-flex;
+}
+.contenedor-header > .container > div:nth-child(2) > div:first-child > div {
+	display: inline;
+	font-family: "Lato Medium";
+}
+.contenedor-header > .container > div:nth-child(2) > div:last-child > div {
+	display: inline;
+	font-family: "Lato Bold";
+}
+.contenedor-header > .container > div:nth-child(2) > div  #img-user-photo {
+	border-radius: 50%;
+	width: 45px;
+}
+
+/**/
+#div-user > div {
+	align-items: center;
+	display: inline-flex;
+}
+#div-user > div:nth-child(2) > div:first-child > div {
+	display: inline;
+	font-family: "Lato Medium";
+}
+#div-user > div:nth-child(2) > div {
+	display: inline;
+	font-family: "Lato Bold";
+}
+.contenedor-header #img-user-photo {
+	border-radius: 50%;
+	width: 45px;
+}
+/**/
+.contenedor-menu {
+	background-color: #662D8C;
+	color: #FFF;
+	display: inline-flex;
+	font-size: 14px;
+	width: 100%;
+}
+.contenedor-menu .navbar {
+	padding: 0 !important;
+}
+.contenedor-menu .navbar-nav,
+.contenedor-menu .navbar-nav .nav-item {
+	width: 100%;
+}
+.contenedor-menu .navbar-nav .nav-item .nav-link {
+	color: #FFF;
+	font-family: "Lato Regular";
+	padding: 15px 8px;
+	text-align: center;
+}
+.contenedor-menu .navbar-nav .nav-item .nav-link.active {
+	background-color: #210d3b;
+}
+.contenedor-menu .navbar-light button.navbar-toggler {
+	border-color: #FFF;
+	color: #FFF;
+}
+.contenedor-menu .navbar-light button.navbar-toggler:hover {
+	border-color: #662D8C;
+	color: #662D8C;
+}
+/****************************************************************
+	BOOTSTRAP-DATETIMEPICKER
+****************************************************************/
+.datetimepicker.datetimepicker-dropdown-bottom-right.dropdown-menu {
+	padding:0!important;
+}
+.datetimepicker-days {
+    border:1px solid #888!important;
+    border-radius:5px;
+}
+.datetimepicker-days table thead tr th {
+	background-color:#210D3B!important;
+	border-radius:0!important;
+	color:#FFF!important;
+	font-family:"Lato Bold"!important;
+	font-size:.75rem!important;
+	text-align:center!important;
+}
+.datetimepicker-days table tbody tr td {
+	background-color:#EEE!important;
+	color:#210D3B!important;
+	font-family:"Lato Medium"!important;
+	font-size:.75rem!important;
+	text-align:center!important;
+	vertical-align:middle!important;
+}
+.datetimepicker table tr td.active,
+.datetimepicker table tr td.active:hover,
+.datetimepicker table tr td.active.disabled,
+.datetimepicker table tr td.active.disabled:hover {
+	background-image:linear-gradient(to bottom,#210D3B,#210D3B)!important;
+	color:#FFF!important;
+}
+/*Input group*/
+.input-group {
+	border:1px solid #662D8C!important;
+	border-radius:5px;
+	box-shadow:0 0 0px 1px #662D8C!important;
+}
+.input-group > .form-control {
+	background-color:#FFF!important;
+	border:0!important;
+	border-radius:5px 0 0 5px;
+	border-right-width:0!important;
+	box-shadow:none!important;
+	font-family:'Lato Regular'!important;
+	font-size:14px!important;
+	padding:0 0 0 1rem!important;
+}
+.input-group-append > .input-group-text {
+	border:1px solid rgba(0,0,0,.1)!important;
+	background-color: #FFF !important;
+	border-color: rgba(0,0,0,.1) !important;
+	border-left-width: 0 !important;
+	border-radius:0 5px 5px 0;
+}
+.input-group-append > .input-group-text > a {
+	cursor: pointer;
+	display: inline-flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.input-group-append > .input-group-text > a > .fa {
+	color: rgba(0,0,0,.5);
+	font-size: 14px;
+}
+/****************************************************************
+	SCROLL
+****************************************************************/
+.scroll {
+	max-height:400px;
+	min-height:400px;
+	overflow:auto;
+}
+.scroll::-webkit-scrollbar {
+	height:10px;
+	width:10px;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background:#333;
+    border-radius:5px;
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+    background:#333;
+    box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.scroll::-webkit-scrollbar-thumb:active {
+    background-color:#333;
+}
+.scroll::-webkit-scrollbar-track {
+    background:#BBB;
+    border-radius:5px;
+}
+.scroll::-webkit-scrollbar-track:hover,
+.scroll::-webkit-scrollbar-track:active {
+	/*background:#d4d4d4;*/
+}
+/**/
+.factura-contenedor-table {
+	border:2px solid #4A1F6F;
+	border-radius:7.5px;
+	padding:5px;
+}

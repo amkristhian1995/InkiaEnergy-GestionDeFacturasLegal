@@ -1,0 +1,204 @@
+.table{
+	margin:0!important;
+}
+.custom-table {
+	margin:0!important;
+	width:100%!important;
+}
+.custom-table > thead {
+	background-color: #662D8C;
+}
+.custom-table > thead tr th {
+	background-color:#662D8C!important;
+	color:#FFF!important;
+	font-family:"Lato Regular"!important;
+	font-size:.75rem!important;
+	padding: 7.5px 15px;
+	text-align:left;
+}
+.custom-table > tbody > tr > td {
+	background-color:#FFF!important;
+	color:#210D3B!important;
+	font-family:"Lato Medium"!important;
+	font-size:.7rem!important;
+	text-align:left;
+	vertical-align:middle!important;
+}
+.custom-table > tbody > tr > td > i {
+	color:#662D8C!important;
+	font-size:1rem;
+}
+
+.custom-table-0 {
+	border:none!important;
+	display: block;
+}
+.custom-table-0 > thead {
+	background-color:#FFF;
+	display:none;
+}
+.custom-table-0 > thead > tr > th {
+	background-color:#FFF!important;
+	border:0px solid #FFF!important;
+	color:#FFF!important;
+	font-family:"Lato Regular"!important;
+	font-size:0rem!important;
+	padding: 7.5px 15px;
+	text-align:left;
+	width:100%;
+}
+.custom-table-0 > tbody > tr > td {
+	background-color:#8E1E5B!important;
+	color:#FFF!important;
+	font-family:"Lato Medium"!important;
+	font-size:.7rem!important;
+	text-align:left;
+	vertical-align:middle!important;
+	width:100%;
+}
+.custom-table-0 > tbody > tr > td:last-child {
+	text-align:right;
+}
+.custom-table-0 > tbody > tr > td[colspan] {
+	background-color:#FFF!important;
+	padding:0!important;
+}
+.custom-table-0 > tbody tr td i {
+	color:#FFF!important;
+	font-size:1rem;
+}
+.custom-table-0 > tbody tr td .btn,
+.custom-table-0 > tbody tr td .btn i {
+	color:#FFF!important;
+	font-size:.5rem;
+}
+
+.custom-table-1 {
+	border:none!important;
+}
+.custom-table-1 > thead {
+	background-color:#FFF;
+}
+.custom-table-1 > thead > tr > th {
+	background-color:#FFF!important;
+	border:0px solid #FFF!important;
+	color:#FFF!important;
+	font-family:"Lato Regular"!important;
+	font-size:0rem!important;
+	padding:0!important;
+	text-align:left;
+}
+.custom-table-1 > tbody > tr > td {
+	background-color:#8E1E5B!important;
+	color:#FFF!important;
+	font-family:"Lato Medium"!important;
+	font-size:.7rem!important;
+	text-align:left;
+	vertical-align:middle!important;
+}
+.custom-table-1 > tbody > tr > td:last-child {
+	background-color:#FFF!important;
+	text-align:right;
+}
+.custom-table-1 > tbody > tr > td[colspan] {
+	background-color:#FFF!important;
+	padding:0!important;
+}
+.custom-table-1 > tbody tr td i {
+	color:#FFF!important;
+	font-size:1rem;
+}
+.custom-table-1 > tbody tr td .btn,
+.custom-table-1 > tbody tr td .btn i {
+	color:#FFF!important;
+	font-size:.5rem;
+}
+
+.custom-table-2 {
+	width:100%!important;
+}
+.custom-table-2 > thead {
+	background-color: #662D8C;
+}
+.custom-table-2 > thead > tr > th {
+	background-color:#662D8C!important;
+	color:#FFF!important;
+	font-family:"Lato Regular"!important;
+	font-size:.75rem!important;
+	padding: 7.5px 15px;
+	text-align:left;
+}
+.custom-table-2 > tbody > tr > td {
+	background-color:#8E1E5B!important;
+	color:#FFF!important;
+	font-family:"Lato Medium"!important;
+	font-size:.7rem!important;
+	text-align:left;
+	vertical-align:middle!important;
+}
+.custom-table-2 > tbody > tr > td:last-child {
+	background-color:#FFF!important;
+}
+.custom-table-2 > tbody tr td i {
+	color:#FFF!important;
+	font-size:1rem;
+}
+.custom-table-2 > tbody tr td .btn,
+.custom-table-2 > tbody tr td .btn i {
+	color:#FFF!important;
+	font-size:.5rem;
+}
+
+.custom-table-3 {
+	width:100%!important;
+}
+.custom-table-3 > thead {
+	background-color:#FFF!important;
+}
+.custom-table-3 > thead > tr > th {
+	background-color:#FFF!important;
+	color:#662D8C!important;
+	font-family:"Lato Regular"!important;
+	font-size:.75rem!important;
+	padding: 7.5px 15px;
+	text-align:left;
+}
+.custom-table-3 > tbody > tr > td {
+	background-color:#FFF!important;
+	color:#555!important;
+	font-family:"Lato Medium"!important;
+	font-size:.7rem!important;
+	text-align:left;
+	vertical-align:middle!important;
+}
+.custom-table-3 > tbody > tr > td:last-child {
+	background-color:#FFF!important;
+}
+.custom-table-3 > tbody tr td i {
+	color:#662D8C!important;
+	font-size:1rem;
+}
+
+.container-head {
+	background-color:#FFF!important;
+	border:1px solid #8E1E5B!important;
+	border-radius:5px;
+	display: inline-block;
+	font-family:"Lato Regular";
+	font-size:.75rem;
+	padding:.5rem 1.5rem;
+	text-align:center;
+}
+.container-head > div {
+	color:#662D8C!important;
+}
+.container-head > div:last-child {
+	font-family:"Lato Bold";
+	font-size:1rem!important;
+}
+.container-head.negativo > div:last-child {
+	color:red!important;
+}
+table.dataTable{
+	margin:0!important;
+}

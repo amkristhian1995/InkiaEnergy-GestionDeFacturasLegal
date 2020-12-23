@@ -1,0 +1,23 @@
+#suiteBarDelta,
+#ms-designer-ribbon,
+#s4-ribbonrow,
+#s4-titlerow,
+#sideNavBox {
+	display: none !important;
+}
+#contentRow {
+	padding: 0 !important;
+}
+#contentBox {
+	margin: 0 !important;
+	min-width: 0 !important;
+}
+#s4-bodyContainer {
+	padding-bottom: 0 !important;
+}
+#s4-workspace {
+	background-color: inherit;
+}
+#DeltaPlaceHolderMain {
+	padding-bottom: 25px;
+}

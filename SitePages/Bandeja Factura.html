@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factura</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../resources/css/master.css">
+</head>
+<body>
+	<header>
+		<div class="contenedor-header pt-4 pb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-2 d-flex align-items-center flex-wrap justify-content-between">
+						<a href="Home.aspx"><img src="../resources/img/logo.svg" data-themekey="#"></a>
+						<div class="ml-4" style="border-left: 2px solid rgba(255,255,255,.75); width: 10px;height: 30px"></div>
+					</div>
+					<div class="col-12 col-md-6">
+						<h5>Sistema de Gestión de Facturas Legal</h5>
+					</div>
+					<div class="col-12 col-md-4 d-flex align-items-center justify-content-end" id="div-user">
+						<div>
+							<div id="user-information">
+								<div>Juan Perez Maldonado</div>
+								<div>juan@example.com</div>
+							</div>
+							<div class="ml-3">
+								<a class="text-white" href="#"><i class="fa fa-sort-down"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="d-flex align-items-stretch w-100">
+		<nav id="menu-left">
+	        <div class="p-0 pt-2">
+	            <div>
+	            	<button class="btn btn-white" id="sidebarCollapse" type="button">
+	                    <i class="fa fa-bars"></i>
+	                    <span class="sr-only">Toggle Menu</span>
+	                </button>
+	            </div>
+	            <ul class="mb-3 px-2">
+	            	<li class="mb-1 pl-2">
+	            		<a href="#">Presupuestos</a>
+	            	</li>
+	            	<li class="mb-1 pl-2">
+	            		<a href="#">Facturas</a>
+	            	</li>
+	            	<li class="mb-1 pl-2">
+	            		<a href="#">Proyectos</a>
+	            	</li>
+	            	<li class="mb-1 pl-2">
+	            		<a href="#">Proveedores</a>
+	            	</li>
+	            	<li class="mb-1 pl-2">
+	            		<a href="#">Administración</a>
+	            	</li>
+	            	<li class="mb-1 pl-2"><a href="#"></a></li>
+	            </ul>
+	        </div>
+	    </nav>
+		<main class="w-100 py-2">
+			<div class="container pt-4 px-4 mx-2">
+				<div class="row">
+					<div class="col-12">
+						<h4 class="m-0"><a href="#">FACTURAS</a></h4>
+					</div>
+					<div class="col-12">
+						<hr/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="mis-presupuesto-tab-just" data-toggle="tab" href="#mis-presupuesto-just" role="tab" aria-controls="mis-presupuesto-just" aria-selected="true">Mis presupuesto</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="mis-pendientes-tab-just" data-toggle="tab" href="#mis-pendientes-just" role="tab" aria-controls="mis-pendientes-just" aria-selected="false">Mis pendientes</a>
+							</li>
+						</ul>
+						<div class="tab-content card pt-2">
+							<div class="tab-pane fade show active" id="mis-presupuesto-just" role="tabpanel" aria-labelledby="mis-presupuesto-tab-just">
+								<div class="row mt-4">
+									<div class="col-12 col-md-4 mb-2">
+										<input class="form-control" placeholder="Escriba su busqueda" type="text" />
+									</div>
+									<div class="col-12 col-md-4 mb-2">
+										<button class="btn btn-inkia-energy-1 mx-2">Buscar</button>
+										<button class="btn btn-success mx-2" id="export-excel-1">Excel</button>
+									</div>
+									<div class="col-12 col-md-4 mb-2 text-right">
+										<a class="btn btn-inkia-energy-2" data-toggle="modal" data-target="#modal-factura"><i class="fa fa-plus"></i> Factura</a>
+									</div>
+								</div>
+								<div class="row mt-4">
+									<div class="col-12 col-md-3">
+										<nav id="factura-menu-left">
+									        <div class="p-0">
+									            <ul class="mb-3 px-2">
+									            	<li class="mb-1 pl-2">
+									            		<a data-show="#tbl-project-001" onclick="ActualizarVistaTablaFacturacion(this)">Project<br/>Corporate Secreterial Service</a>
+									            	</li>
+									            	<li class="mb-1 pl-2">
+									            		<a data-show="#tbl-project-002" onclick="ActualizarVistaTablaFacturacion(this)">Project<br/>PCO Maple/Aguaytia 1</a>
+									            	</li>
+									            	<li class="mb-1 pl-2">
+									            		<a data-show="#tbl-project-003" onclick="ActualizarVistaTablaFacturacion(this)">Project<br/>PCO Maple/Aguaytia 2</a>
+									            	</li>
+									            	<li class="mb-1 pl-2">
+									            		<a data-show="#tbl-project-004" onclick="ActualizarVistaTablaFacturacion(this)">Project<br/>PCO Maple/Aguaytia 3</a>
+									            	</li>
+									            	<li class="mb-1 pl-2">
+									            		<a data-show="#tbl-project-005" onclick="ActualizarVistaTablaFacturacion(this)">Project<br/>PCO Maple/Aguaytia 4</a>
+									            	</li>
+									            </ul>
+									        </div>
+									    </nav>
+									</div>
+									<div class="col-12 col-md-9">
+										<div class="factura-contenedor-table">
+											<div class="scroll">
+												<table class="table table-striped table-bordered custom-table-0" id="tbl-project-001">
+													<thead>
+														<tr>
+															<th>Proyecto</th>
+															<th>Detalle</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Project<br/>Corporate Secreterial Service</td>
+															<td>
+																<div class="container-head mx-2">
+																	<div>Presupuesto</div>
+																	<div>530</div>
+																</div>
+																<div class="container-head mx-2">
+																	<div>Facturado</div>
+																	<div>530</div>
+																</div>
+																<div class="container-head negativo mx-2">
+																	<div>Diferencia</div>
+																	<div>-20</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="3">
+																<table class="table table-striped table-bordered dt-responsive nowrap custom-table-1">
+																	<thead>
+																		<tr>
+																			<th>Proyecto</th>
+																			<th>Proveedor</th>
+																			<th>Detalle</th>
+																			<th></th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Proyecto<br/>Financiamiento Proyecto Yelloy 1</td>
+																			<td>Proveedor<br/>White & Cas</td>
+																			<td>
+																				<div class="container-head mx-2">
+																					<div>Presupuesto</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head mx-2">
+																					<div>Facturado</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head negativo mx-2">
+																					<div>Diferencia</div>
+																					<div>-20</div>
+																				</div>
+																			</td>
+																			<td>
+																				<table class="table w-100 custom-table-2">
+																					<thead>
+																						<tr>
+																							<th>N° de Factura</th>
+																							<th>Monto Total</th>
+																							<th>Moneda</th>
+																							<th>Moneda USD Aprox.</th>
+																							<th>Responsable</th>
+																							<th>Estado</th>
+																							<th class="text-center">Acciones</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>1300-20-01130</td>
+																							<td>23,230.00</td>
+																							<td>PEN</td>
+																							<td>6,638.34</td>
+																							<td>Andres Pesaque</td>
+																							<td>Pagada</td>
+																							<td class="text-center">
+																								<a class="mx-2" href="#"><i class="fa fa-pdf"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																								<a class="btn btn-inkia-energy-2" href="#" data-toggle="modal" data-target="#modal-concepto"><i class="fa fa-plus"></i> CONCEPTO</a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="7">
+																								<table class="table table-bordered w-100 dt-responsive nowrap custom-table-3">
+																									<thead>
+																										<tr>
+																											<th>CONCEPTO</th>
+																											<th>MONTO</th>
+																											<th>MONTO USD APROX.</th>
+																											<th>TIPO COBRO</th>
+																											<th>FORMA DE PAGO</th>
+																											<th>ACCIONES</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<table class="table w-100 custom-table-2">
+																					<thead>
+																						<tr>
+																							<th>N° de Factura</th>
+																							<th>Monto Total</th>
+																							<th>Moneda</th>
+																							<th>Moneda USD Aprox.</th>
+																							<th>Responsable</th>
+																							<th>Estado</th>
+																							<th class="text-center">Acciones</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>1300-20-01130</td>
+																							<td>23,230.00</td>
+																							<td>PEN</td>
+																							<td>6,638.34</td>
+																							<td>Andres Pesaque</td>
+																							<td>Pagada</td>
+																							<td class="text-center">
+																								<a class="mx-2" href="#"><i class="fa fa-pdf"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																								<a class="btn btn-inkia-energy-2" href="#" data-toggle="modal" data-target="#modal-concepto"><i class="fa fa-plus"></i> CONCEPTO</a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="7">
+																								<table class="table table-bordered w-100 custom-table-3">
+																									<thead>
+																										<tr>
+																											<th>CONCEPTO</th>
+																											<th>MONTO</th>
+																											<th>MONTO USD APROX.</th>
+																											<th>TIPO COBRO</th>
+																											<th>FORMA DE PAGO</th>
+																											<th>ACCIONES</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				Proyecto<br/>Financiamiento Proyecto Yelloy 2
+																			</td>
+																			<td>
+																				Proveedor<br/>White & Cas
+																			</td>
+																			<td>
+																				<div class="container-head mx-2">
+																					<div>Presupuesto</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head mx-2">
+																					<div>Facturado</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head negativo mx-2">
+																					<div>Diferencia</div>
+																					<div>-20</div>
+																				</div>
+																			</td>
+																			<td>
+																				<table class="table w-100 custom-table-2">
+																					<thead>
+																						<tr>
+																							<th>N° de Factura</th>
+																							<th>Monto Total</th>
+																							<th>Moneda</th>
+																							<th>Moneda USD Aprox.</th>
+																							<th>Responsable</th>
+																							<th>Estado</th>
+																							<th class="text-center">Acciones</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>1300-20-01130</td>
+																							<td>23,230.00</td>
+																							<td>PEN</td>
+																							<td>6,638.34</td>
+																							<td>Andres Pesaque</td>
+																							<td>Pagada</td>
+																							<td class="text-center">
+																								<a class="mx-2" href="#"><i class="fa fa-pdf"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																								<a class="btn btn-inkia-energy-2" href="#" data-toggle="modal" data-target="#modal-concepto"><i class="fa fa-plus"></i> CONCEPTO</a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="7">
+																								<table class="table table-bordered w-100 custom-table-3">
+																									<thead>
+																										<tr>
+																											<th>CONCEPTO</th>
+																											<th>MONTO</th>
+																											<th>MONTO USD APROX.</th>
+																											<th>TIPO COBRO</th>
+																											<th>FORMA DE PAGO</th>
+																											<th>ACCIONES</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<!--Tabla 002-->
+										<table class="table table-striped table-bordered custom-table-0" id="tbl-project-002">
+													<thead>
+														<tr>
+															<th>Proyecto</th>
+															<th>Detalle</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Project<br/>PCO Maple/Aguaytia 1</td>
+															<td>
+																<div class="container-head mx-2">
+																	<div>Presupuesto</div>
+																	<div>530</div>
+																</div>
+																<div class="container-head mx-2">
+																	<div>Facturado</div>
+																	<div>530</div>
+																</div>
+																<div class="container-head negativo mx-2">
+																	<div>Diferencia</div>
+																	<div>-20</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="3">
+																<table class="table table-striped table-bordered dt-responsive nowrap custom-table-1">
+																	<thead>
+																		<tr>
+																			<th>Proyecto</th>
+																			<th>Proveedor</th>
+																			<th>Detalle</th>
+																			<th></th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Proyecto<br/>Financiamiento Proyecto Yelloy 1</td>
+																			<td>Proveedor<br/>White & Cas</td>
+																			<td>
+																				<div class="container-head mx-2">
+																					<div>Presupuesto</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head mx-2">
+																					<div>Facturado</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head negativo mx-2">
+																					<div>Diferencia</div>
+																					<div>-20</div>
+																				</div>
+																			</td>
+																			<td>
+																				<table class="table w-100 custom-table-2">
+																					<thead>
+																						<tr>
+																							<th>N° de Factura</th>
+																							<th>Monto Total</th>
+																							<th>Moneda</th>
+																							<th>Moneda USD Aprox.</th>
+																							<th>Responsable</th>
+																							<th>Estado</th>
+																							<th class="text-center">Acciones</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>1300-20-01130</td>
+																							<td>23,230.00</td>
+																							<td>PEN</td>
+																							<td>6,638.34</td>
+																							<td>Andres Pesaque</td>
+																							<td>Pagada</td>
+																							<td class="text-center">
+																								<a class="mx-2" href="#"><i class="fa fa-pdf"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																								<a class="btn btn-inkia-energy-2" href="#" data-toggle="modal" data-target="#modal-concepto"><i class="fa fa-plus"></i> CONCEPTO</a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="7">
+																								<table class="table table-bordered w-100 dt-responsive nowrap custom-table-3">
+																									<thead>
+																										<tr>
+																											<th>CONCEPTO</th>
+																											<th>MONTO</th>
+																											<th>MONTO USD APROX.</th>
+																											<th>TIPO COBRO</th>
+																											<th>FORMA DE PAGO</th>
+																											<th>ACCIONES</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<table class="table w-100 custom-table-2">
+																					<thead>
+																						<tr>
+																							<th>N° de Factura</th>
+																							<th>Monto Total</th>
+																							<th>Moneda</th>
+																							<th>Moneda USD Aprox.</th>
+																							<th>Responsable</th>
+																							<th>Estado</th>
+																							<th class="text-center">Acciones</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>1300-20-01130</td>
+																							<td>23,230.00</td>
+																							<td>PEN</td>
+																							<td>6,638.34</td>
+																							<td>Andres Pesaque</td>
+																							<td>Pagada</td>
+																							<td class="text-center">
+																								<a class="mx-2" href="#"><i class="fa fa-pdf"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																								<a class="btn btn-inkia-energy-2" href="#" data-toggle="modal" data-target="#modal-concepto"><i class="fa fa-plus"></i> CONCEPTO</a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="7">
+																								<table class="table table-bordered w-100 custom-table-3">
+																									<thead>
+																										<tr>
+																											<th>CONCEPTO</th>
+																											<th>MONTO</th>
+																											<th>MONTO USD APROX.</th>
+																											<th>TIPO COBRO</th>
+																											<th>FORMA DE PAGO</th>
+																											<th>ACCIONES</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				Proyecto<br/>Financiamiento Proyecto Yelloy 2
+																			</td>
+																			<td>
+																				Proveedor<br/>White & Cas
+																			</td>
+																			<td>
+																				<div class="container-head mx-2">
+																					<div>Presupuesto</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head mx-2">
+																					<div>Facturado</div>
+																					<div>530</div>
+																				</div>
+																				<div class="container-head negativo mx-2">
+																					<div>Diferencia</div>
+																					<div>-20</div>
+																				</div>
+																			</td>
+																			<td>
+																				<table class="table w-100 custom-table-2">
+																					<thead>
+																						<tr>
+																							<th>N° de Factura</th>
+																							<th>Monto Total</th>
+																							<th>Moneda</th>
+																							<th>Moneda USD Aprox.</th>
+																							<th>Responsable</th>
+																							<th>Estado</th>
+																							<th class="text-center">Acciones</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																						<tr>
+																							<td>1300-20-01130</td>
+																							<td>23,230.00</td>
+																							<td>PEN</td>
+																							<td>6,638.34</td>
+																							<td>Andres Pesaque</td>
+																							<td>Pagada</td>
+																							<td class="text-center">
+																								<a class="mx-2" href="#"><i class="fa fa-pdf"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																								<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																								<a class="btn btn-inkia-energy-2" href="#" data-toggle="modal" data-target="#modal-concepto"><i class="fa fa-plus"></i> CONCEPTO</a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="7">
+																								<table class="table table-bordered w-100 custom-table-3">
+																									<thead>
+																										<tr>
+																											<th>CONCEPTO</th>
+																											<th>MONTO</th>
+																											<th>MONTO USD APROX.</th>
+																											<th>TIPO COBRO</th>
+																											<th>FORMA DE PAGO</th>
+																											<th>ACCIONES</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>1300-20-01130</td>
+																											<td>23,230.00</td>
+																											<td>23,230.00</td>
+																											<td>Horas</td>
+																											<td>Trimestre</td>
+																											<td>
+																												<a class="mx-2" href="#"><i class="fa fa-edit"></i></a>
+																												<a class="mx-2" href="#"><i class="fa fa-trash"></i></a>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="mis-pendientes-just" role="tabpanel" aria-labelledby="mis-pendientes-tab-just">
+								<div class="row mt-4">
+									<div class="col-12 col-md-4 mb-2">
+										<input class="form-control" placeholder="Escriba su busqueda" type="text" />
+									</div>
+									<div class="col-12 col-md-4 mb-2">
+										<button class="btn btn-inkia-energy-1 mx-2">Buscar</button>
+										<button class="btn btn-success mx-2">Excel</button>
+									</div>
+									<div class="col-12 col-md-4 mb-2 text-right">
+										<a class="btn btn-inkia-energy-2" href="Nuevo Presupuesto.html"><i class="fa fa-plus"></i> Presupuesto</a>
+									</div>
+								</div>
+								<div class="row mt-4">
+									<div class="col-12"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!--Modal-->
+	<div id="modal-factura" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<!-- Modal content-->
+			<div class="modal-content px-2">
+				<div class="modal-header">
+					<div class="row w-100">
+						<div class="col-12 col-md-6 mb-2">
+							<h5 class="modal-title">Agregar Factura</h5>
+						</div>
+						<div class="col-4 col-md-2 mb-2 d-flex align-items-center justify-content-end">
+							<label>Proyecto</label>
+						</div>
+						<div class="col-4 col-md-4 mb-2">
+							<div class="input-group">
+								<input class="form-control" type="text">
+								<div class="input-group-append ml-0">
+									<span class="input-group-text">
+										<a><i class="fa fa-search"></i></a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Proveedor (Razón Social)</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<input class="form-control" type="text">
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Moneda</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<div class="input-group">
+								<input class="form-control" type="text">
+								<div class="input-group-append ml-0">
+									<span class="input-group-text">
+										<a><i class="fa fa-search"></i></a>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Responsable Proveedor</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<input class="form-control" type="text">
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Tipo Servicio</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<input class="form-control" type="text">
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Es Plataforma</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<div class="custom-control custom-checkbox">
+							    <input type="checkbox" class="custom-control-input" id="cb-es-plataforma">
+							    <label class="custom-control-label" for="cb-es-plataforma"></label>
+							</div>
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Archivo de Plataforma</label>
+						</div>
+						<div class="col-5 col-md-2 mb-2">
+							<input class="form-control" type="text">
+						</div>
+						<div class="col-4 col-md-2 mb-2">
+							<a href="#" class="btn btn-inkia-energy-1">Adjuntar</a>
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Número de Factura</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<input class="form-control" type="text">
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Fecha emisión de Factura</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<input class="form-control date" type="text">
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Monto</label>
+						</div>
+						<div class="col-9 col-md-4 mb-2">
+							<input class="form-control" type="text">
+						</div>
+						<div class="col-3 col-md-2 mb-2 d-flex align-items-center justify-content-start">
+							<label>Archivo de Factura</label>
+						</div>
+						<div class="col-5 col-md-2 mb-2">
+							<input class="form-control" type="text">
+						</div>
+						<div class="col-4 col-md-2 mb-2">
+							<a href="#" class="btn btn-inkia-energy-1">Adjuntar</a>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button type="button" class="btn btn-secondary mx-2" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-inkia-energy-2 mx-2" data-dismiss="modal">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-concepto" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered">
+			<!-- Modal content-->
+			<div class="modal-content px-2">
+				<div class="modal-header">
+					<div class="row w-100">
+						<div class="col-12 col-md-6 mb-2">
+							<h5 class="modal-title">Agregar Concepto</h5>
+						</div>
+						<div class="col-4 col-md-2 mb-2 d-flex align-items-center justify-content-end">
+							<label>Proyecto</label>
+						</div>
+						<div class="col-4 col-md-4 mb-2">
+							<input class="form-control" type="text" value="Factura">
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-3 mb-2 d-flex align-items-center justify-content-start">
+							<label>Concepto</label>
+						</div>
+						<div class="col-9 mb-2">
+							<select class="form-control"></select>
+						</div>
+						<div class="col-3 mb-2 d-flex align-items-center justify-content-start">
+							<label>Tipo de Cobro</label>
+						</div>
+						<div class="col-9 mb-2">
+							<select class="form-control"></select>
+						</div>
+						<div class="col-3 mb-2 d-flex align-items-center justify-content-start">
+							<label>Forma de Pago</label>
+						</div>
+						<div class="col-9 mb-2">
+							<select class="form-control"></select>
+						</div>
+						<div class="col-3 mb-2 d-flex align-items-center justify-content-start">
+							<label>Moneda</label>
+						</div>
+						<div class="col-9 mb-2">
+							<input class="form-control" type="text" >
+						</div>
+						<div class="col-3 mb-2 d-flex align-items-center justify-content-start">
+							<label>Monto</label>
+						</div>
+						<div class="col-9 mb-2">
+							<input class="form-control" type="text" >
+						</div>
+						<div class="col-3 mb-2 d-flex align-items-center justify-content-start">
+							<label>Monto USD Aprox.</label>
+						</div>
+						<div class="col-9 mb-2">
+							<input class="form-control" type="text" >
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button type="button" class="btn btn-secondary mx-2" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-inkia-energy-2 mx-2" data-dismiss="modal">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../resources/js/libraries//jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="../resources/js/libraries/popper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../resources/js/libraries/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../resources/js/libraries/datatables.min.js"></script>
+	<script type="text/javascript" src="../resources/js/libraries/moment.js"></script>
+	<script type="text/javascript" src="../resources/js/libraries/moment.local.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			/*$("table").each(function(i,e){
+			    $(e).DataTable( {
+			        paging: false,
+			        searching:false,
+			    });
+			});*/
+			$('.custom-table-1').DataTable( {
+				info:false,
+				paging: false,
+				searching:false,
+			});
+			$("#export-excel-1").on("click", function() {
+				$("#tbl-presupuesto_wrapper button").click();
+			});
+			$('#sidebarCollapse').on('click',function(){
+				$('#menu-left').toggleClass('active');
+				$("#menu-left > div > div:nth-child(1) > button").toggleClass('active');
+			});
+			$('.date').datetimepicker({
+				autoclose:1,
+				forceParse:0,
+				format:'dd/mm/yyyy',
+				language:'es',
+				minView:2,
+				showMeridian:true,
+				startView:2,
+				todayBtn:0,
+				todayHighlight:1,
+				weekStart:1,
+			});
+			$(".factura-contenedor-table > .scroll > table").addClass("d-none");
+		})
+		function ActualizarVistaTablaFacturacion(e) {
+			$(".factura-contenedor-table > .scroll > table").addClass("d-none");
+		    var id=$(e).attr("data-show");
+		    $(id).removeClass("d-none");
+		}
+	</script>
+</body>
+</html>

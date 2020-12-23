@@ -1,0 +1,54 @@
+@import url('custom/custom-table.css');
+body {
+	background-color:#210D3B!important;
+}
+main {
+	background-color:#210D3B!important;
+	min-height:100vh;
+	min-width:100%;
+}
+main > div {
+	background-color:#210D3B!important;
+}
+label {
+	color:#210D3B!important;
+	font-family:"Lato Medium"!important;
+	margin:0!important;
+}
+h6 {
+	font-size:.9rem;
+}
+hr {
+	border-bottom:1px solid #888!important;
+}
+.container-form {
+	background-color:#FFF;
+	border:0 solid #888!important;
+	border-radius:.5rem;
+	margin:auto;
+	width:100%;
+	max-width:700px;
+	overflow:hidden;
+	padding:0!important;
+}
+.background {
+	background-image:url('../img/Grupo 648.svg')!important;
+	background-size:cover;
+}
+.form-logo {
+	margin-bottom:.75rem;
+	width: 20%;
+}
+.text-inkia-energy {
+	color:#662D8C!important;
+	font-family:"Lato Bold";
+}
+.text-555 {
+	color:#555!important;
+}
+a.text-inkia-energy {
+	text-decoration:underline;
+}
+i {
+	font-size:1.75rem!important;
+}
